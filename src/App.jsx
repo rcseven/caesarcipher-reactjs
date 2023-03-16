@@ -1,19 +1,23 @@
 import "./styles.scss";
 import { useState } from "react";
+import hands from "./assets/hands.png";
 
 function App() {
   const [inputText, setInputText] = useState("");
   const [inputKey, setInputKey] = useState(0);
   const [outputText, setOutputText] = useState(null);
+  const [isClosed, setIsClosed] = useState(false);
 
   function handleEncrypt(e) {
     e.preventDefault();
     setOutputText(caesarCipher(inputText, inputKey, "encrypt"));
+    setIsClosed(false);
   }
 
   function handleDecrypt(e) {
     e.preventDefault();
     setOutputText(caesarCipher(inputText, inputKey, "decrypt"));
+    setIsClosed(true);
   }
 
   function caesarCipher(str, shift, action) {
@@ -51,7 +55,9 @@ function App() {
     <div className="container">
       <div className="card">
         <h1>Caesar's Cipher</h1>
-        <div className="monkey"></div>
+        <div className="monkey">
+          <img id={isClosed ? "close-eyes" : ""} src={hands} alt="hands" />
+        </div>
         <form>
           <div className="form-input">
             <input
