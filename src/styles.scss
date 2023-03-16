@@ -1,0 +1,100 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(112, 140, 165);
+
+  .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 20em;
+    height: 30em;
+
+    border-radius: 2em;
+    box-shadow: 0 0.8em 1.5em rgba(0, 0, 0, 0.2);
+
+    background-color: #ffffff;
+
+    h1 {
+      text-align: center;
+      color: rgb(112, 140, 165);
+      font-family: "Poppins", sans-serif;
+    }
+
+    .monkey {
+      margin: 2em auto;
+      background-color: white;
+
+      width: 8em;
+      height: 8em;
+      border-radius: 50%;
+      background-image: url("./assets/monkey.gif");
+      background-size: 90% 85%;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    form {
+      .form-input {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        input {
+          color: #ffffff;
+          background-color: rgb(112, 140, 165);
+          height: 2.5vh;
+          border: solid 0.2em rgb(112, 140, 165);
+          border-radius: 0.3em;
+          padding: 0 0.5em;
+          box-shadow: 0 0.8em 1.5em rgba(0, 0, 0, 0.2);
+        }
+        ::placeholder {
+          color: #ffffff;
+        }
+
+        :nth-child(1) {
+          width: 15em;
+        }
+        :nth-child(2) {
+          width: 2em;
+        }
+      }
+
+      .form-btn {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        margin: 1em 0;
+
+        button {
+          width: 5em;
+          height: 2.5em;
+          border: none;
+          border-radius: 0.3em;
+          font-weight: bold;
+          cursor: pointer;
+          box-shadow: 0 0.8em 1.5em rgba(0, 0, 0, 0.2);
+        }
+
+        :nth-child(1) {
+          background-color: rgb(112, 140, 165);
+          color: #ffffff;
+        }
+        :nth-child(2) {
+          background-color: #ffffff;
+          color: rgb(112, 140, 165);
+          border: solid 0.2em rgb(112, 140, 165);
+        }
+      }
+    }
+    p {
+      padding: 1em auto;
+      text-align: center;
+      font-size: 1em;
+      color: rgb(112, 140, 165);
+    }
+  }
+}
